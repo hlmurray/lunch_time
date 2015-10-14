@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lunch Time</title>
+		<script src="jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<button class="view">View More</button>
+		<div class="data"></div>
+	</body>
+	<script>
+		var url = 'https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=FZLJYH3UANFNV2TTIWIVUL3QC2W14CV1NWESQJAV3ZSWPKIF&v=20151014';
+		$('.view').click(function() {
+			$.get(url, function (data) {
+			      var name = data.response.venue.name;
+			      $('.data').html('<h1>'+name+'</h1>');
+			});
+		});
+	</script>
+</html>
