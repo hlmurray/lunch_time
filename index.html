@@ -9,23 +9,15 @@
 		<div class="data"></div>
 	</body>
 	<script>
-		var url = 'https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=FZLJYH3UANFNV2TTIWIVUL3QC2W14CV1NWESQJAV3ZSWPKIF&v=20151014';
 		var url_search = 'https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=HDVYMQ2N5XFB5HT3TZEU1Z12Y2OFLAYUQ41L2VYMQ142SLTM&client_secret=RLNU4K3VN1LSQWBTPNFKJYUG4E3FFE14XDKFR0DPJZC5ISQ4&v=20151014'
 		$('.view').click(function() {
 			$.get(url_search, function (data) {
-				console.log(data);
 				var array = data.response.venues,
 					dataBucket = [];
 				$.each(array, function(index, value) {
 					dataBucket.push('<h1>'+array[index].name+'</h1>');
 				});
 				$('.data').html(dataBucket.join(""));
-				// for (var i=0; i<data.response.venues.length; i++) {
-				// 	var name = data.response.venues[i].name;
-				// 	$('.data').html('<h1>'+name+'</h1>');
-				// }
-			      // var name = data.response.venue.name;
-			      // $('.data').html('<h1>'+name+'</h1>');
 			});
 		});
 	</script>

@@ -1,0 +1,26 @@
+{
+  "name": "lunch_time",
+  "version": "1.0.0",
+  "description": "What should I eat for lunch?",
+  "main": "app.js",
+  "dependencies": {
+    "foursquarevenues": "^2.0.0",
+    "angular2": "^2.0.0-alpha.42",
+    "request": "~2.64.0",
+    "node-foursquare": "0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hlmurray/lunch_time.git"
+  },
+  "author": "Hannah Murray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hlmurray/lunch_time/issues"
+  },
+  "homepage": "https://github.com/hlmurray/lunch_time"
+}
